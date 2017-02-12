@@ -8,16 +8,17 @@ using Android.Media;
 
 namespace FindThatSpeaker
 {
-    [Activity(Label = "FindThatSpeaker", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "FindThatSpeaker", MainLauncher = true, Icon = "@drawable/appicon")]
     public class MainActivity : Activity
     {
-        string filePath;
+        string filePath = "";
         string filename = "testAudio.mp3";
+
         Button startRecordButton;
 
         TextView log;
 
-        public MediaRecorder recorder = new MediaRecorder();
+        protected MediaRecorder recorder = new MediaRecorder();
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -38,8 +39,11 @@ namespace FindThatSpeaker
 
         private void StartRecord(object sender, System.EventArgs e)
         {
-            log.Text = "recording...\nfile stored: "+filePath;
-          /* try
+            startRecordButton.Enabled = false;//disable button
+
+            log.Text = "-Log-\n\nrecording...\n\nfilepath: "+filePath;//update the log
+
+            try
             {
                 if (File.Exists(filePath))
                 {
@@ -49,41 +53,43 @@ namespace FindThatSpeaker
                 {
                     recorder = new MediaRecorder(); // Initial state.
                 }
-                else
-                {*/
-                    recorder.Reset();
-                    recorder.SetAudioSource(AudioSource.Mic);
-                    recorder.SetOutputFormat(OutputFormat.ThreeGpp);
-                    recorder.SetAudioEncoder(AudioEncoder.AmrNb);
-                    // Initialized state.
-                    recorder.SetOutputFile(filePath);
-                    // DataSourceConfigured state.
-                    recorder.Prepare(); // Prepared state
-                    recorder.Start(); // Recording state.
+                recorder.Reset();
+                recorder.SetAudioSource(AudioSource.Mic);
+                recorder.SetOutputFormat(OutputFormat.ThreeGpp);
+                recorder.SetAudioEncoder(AudioEncoder.AmrNb);
+                recorder.SetMaxDuration(5000);
+                // Initialized state.
+                recorder.SetOutputFile(filePath);
+                // DataSourceConfigured state.
+                recorder.Prepare(); // Prepared state
+                recorder.Start(); // Recording state.
 
-                    //Automatically stop recording after a certain time
-                    Handler h = new Handler();
-                    Action myAction = () =>
-                    {
-                        // your code that you want to run after delay here
-                        StopRecord(sender, e);
-                    };
+                //Automatically stop recording after a certain time
+                Handler h = new Handler();
+                Action myAction = () =>
+                {
+                    // your code that you want to run after delay here
+                    StopRecord(sender, e);
+                };
 
-                    h.PostDelayed(myAction, 5000);//run the action defined above after 5 seconds
-                /*}
+                h.PostDelayed(myAction, 5000);//run the action defined above after 5 seconds
             }
             catch (Exception ex)
             {
                 Console.Out.WriteLine(ex.StackTrace);
-            }*/
+            }
+            
+
         }
         
         private void StopRecord(object sender, System.EventArgs e)
         {
-            log.Text = "recording stopped...";
+            log.Text = "-Log-\n\nrecording stopped...";//update the log
             recorder.Stop();
             recorder.Reset();
             recorder.Release();
+            recorder = null;
+            startRecordButton.Enabled = true;//re-enable button
         }
         
     }
