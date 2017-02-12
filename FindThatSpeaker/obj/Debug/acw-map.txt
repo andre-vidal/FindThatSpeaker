@@ -1,4 +1,0 @@
-FindThatSpeaker.MainActivity, FindThatSpeaker;md56507a62486811d52155c8eb48e4dc47f.MainActivity
-FindThatSpeaker.MainActivity, FindThatSpeaker, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md56507a62486811d52155c8eb48e4dc47f.MainActivity
-FindThatSpeaker.MainActivity;md56507a62486811d52155c8eb48e4dc47f.MainActivity
-findthatspeaker.MainActivity;md56507a62486811d52155c8eb48e4dc47f.MainActivity

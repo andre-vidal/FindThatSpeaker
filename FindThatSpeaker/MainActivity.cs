@@ -6,7 +6,6 @@ using Android.Widget;
 using Android.OS;
 using Android.Media;
 
-
 namespace FindThatSpeaker
 {
     [Activity(Label = "FindThatSpeaker", MainLauncher = true, Icon = "@drawable/icon")]
@@ -15,7 +14,7 @@ namespace FindThatSpeaker
         string filePath;
         string filename = "testAudio.mp3";
         Button startRecordButton;
-        Button stopRecordButton;
+
         TextView log;
 
         public MediaRecorder recorder = new MediaRecorder();
@@ -28,20 +27,19 @@ namespace FindThatSpeaker
             SetContentView (Resource.Layout.Main);
 
             startRecordButton = FindViewById<Button>(Resource.Id.startRecordingButton);
-            stopRecordButton = FindViewById<Button>(Resource.Id.stopRecordingButton);
+
             log = FindViewById<TextView>(Resource.Id.log);
 
             //Get the file path for the media file
             filePath = Android.OS.Environment.GetExternalStoragePublicDirectory(Android.OS.Environment.DirectoryMusic) + "/" + filename;
 
             startRecordButton.Click += StartRecord;
-            stopRecordButton.Click += StopRecord;
         }
 
         private void StartRecord(object sender, System.EventArgs e)
         {
-            log.Text = "recording...\n"+filePath;
-            try
+            log.Text = "recording...\nfile stored: "+filePath;
+          /* try
             {
                 if (File.Exists(filePath))
                 {
@@ -52,7 +50,7 @@ namespace FindThatSpeaker
                     recorder = new MediaRecorder(); // Initial state.
                 }
                 else
-                {
+                {*/
                     recorder.Reset();
                     recorder.SetAudioSource(AudioSource.Mic);
                     recorder.SetOutputFormat(OutputFormat.ThreeGpp);
@@ -62,14 +60,24 @@ namespace FindThatSpeaker
                     // DataSourceConfigured state.
                     recorder.Prepare(); // Prepared state
                     recorder.Start(); // Recording state.
-                }
+
+                    //Automatically stop recording after a certain time
+                    Handler h = new Handler();
+                    Action myAction = () =>
+                    {
+                        // your code that you want to run after delay here
+                        StopRecord(sender, e);
+                    };
+
+                    h.PostDelayed(myAction, 5000);//run the action defined above after 5 seconds
+                /*}
             }
             catch (Exception ex)
             {
                 Console.Out.WriteLine(ex.StackTrace);
-            }
+            }*/
         }
-
+        
         private void StopRecord(object sender, System.EventArgs e)
         {
             log.Text = "recording stopped...";
@@ -77,6 +85,7 @@ namespace FindThatSpeaker
             recorder.Reset();
             recorder.Release();
         }
+        
     }
 }
 
