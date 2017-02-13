@@ -14,7 +14,7 @@ namespace FindThatSpeaker
         string filePath = "";
         string filename = "testAudio.mp3";
 
-        Button startRecordButton;
+        ImageButton startRecordButton;
 
         TextView log;
 
@@ -27,13 +27,13 @@ namespace FindThatSpeaker
             // Set our view from the "main" layout resource
             SetContentView (Resource.Layout.Main);
 
-            startRecordButton = FindViewById<Button>(Resource.Id.startRecordingButton);
+            startRecordButton = FindViewById<ImageButton>(Resource.Id.startRecordingButton);
 
             //Get the file path for the media file
             filePath = Android.OS.Environment.GetExternalStoragePublicDirectory(Android.OS.Environment.DirectoryMusic) + "/" + filename;
 
             log = FindViewById<TextView>(Resource.Id.log);
-            log.Text = "-Log-\n\n-filepath- " + filePath + "\n\nwaiting...";
+            log.Text = "-Log-\n\n-filepath-\n" + filePath + "\n\nwaiting...";
 
             startRecordButton.Click += StartRecord;
         }
@@ -41,9 +41,9 @@ namespace FindThatSpeaker
         private void StartRecord(object sender, System.EventArgs e)
         {
             startRecordButton.Enabled = false;//disable button
-            startRecordButton.Text = "recording";
+           // startRecordButton.Text = "recording";
 
-            log.Text = "-Log-\n\n-filepath- "+ filePath + "\n\nrecording...";//update the log
+            log.Text = "-Log-\n\n-filepath-\n"+ filePath + "\n\nrecording...";//update the log
 
             try
             {
@@ -85,8 +85,8 @@ namespace FindThatSpeaker
         
         private void StopRecord(object sender, System.EventArgs e)
         {
-            log.Text = "-Log-\n\n-filepath- " + filePath + "\n\nrecording stopped...";//update the log
-            startRecordButton.Text = "Tap to record";
+            log.Text = "-Log-\n\n-filepath-\n" + filePath + "\n\nrecording stopped...";//update the log
+           // startRecordButton.Text = "Tap to record";
             recorder.Stop();
             recorder.Reset();
             recorder.Release();
@@ -96,4 +96,3 @@ namespace FindThatSpeaker
         
     }
 }
-
