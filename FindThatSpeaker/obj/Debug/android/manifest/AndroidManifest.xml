@@ -5,7 +5,7 @@
   <uses-permission android:name="android.permission.RECORD_AUDIO" />
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.INTERNET" />
-  <application android:label="FindThatSpeaker" android:name="android.app.Application" android:allowBackup="true" android:icon="@drawable/appicon" android:debuggable="true">
+  <application android:label="FindThatSpeaker" android:icon="@drawable/icon" android:debuggable="true" android:name="android.app.Application" android:allowBackup="true">
     <activity android:icon="@drawable/appicon" android:label="FindThatSpeaker" android:name="md56507a62486811d52155c8eb48e4dc47f.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
