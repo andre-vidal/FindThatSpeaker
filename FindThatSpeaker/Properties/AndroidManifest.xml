@@ -3,5 +3,5 @@
 	<uses-sdk android:minSdkVersion="16" />
 	<uses-permission android:name="android.permission.RECORD_AUDIO" />
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-	<application android:label="FindThatSpeaker"></application>
+	<application android:label="FindThatSpeaker" android:icon="@drawable/Icon"></application>
 </manifest>

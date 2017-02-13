@@ -19,8 +19,9 @@
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:id="@+id/startRecordingButton"
-        android:background="@drawable/recordbutton"
         android:enabled="true"
-        android:layout_marginLeft="90.0dp"
-        android:layout_marginTop="50dp" />
+        android:layout_marginLeft="80.0dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#ffa50000"
+        android:background="@drawable/recordbutton" />
 </LinearLayout>

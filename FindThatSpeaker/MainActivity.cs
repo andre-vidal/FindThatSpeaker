@@ -29,10 +29,11 @@ namespace FindThatSpeaker
 
             startRecordButton = FindViewById<Button>(Resource.Id.startRecordingButton);
 
-            log = FindViewById<TextView>(Resource.Id.log);
-
             //Get the file path for the media file
             filePath = Android.OS.Environment.GetExternalStoragePublicDirectory(Android.OS.Environment.DirectoryMusic) + "/" + filename;
+
+            log = FindViewById<TextView>(Resource.Id.log);
+            log.Text = "-Log-\n\n-filepath- " + filePath + "\n\nwaiting...";
 
             startRecordButton.Click += StartRecord;
         }
@@ -40,9 +41,9 @@ namespace FindThatSpeaker
         private void StartRecord(object sender, System.EventArgs e)
         {
             startRecordButton.Enabled = false;//disable button
+            startRecordButton.Text = "recording";
 
-            log.Text = "-Log-\n\nrecording...\n\nfilepath: "+filePath;//update the log
-            Console.WriteLine("_________________start________________");
+            log.Text = "-Log-\n\n-filepath- "+ filePath + "\n\nrecording...";//update the log
 
             try
             {
@@ -78,15 +79,14 @@ namespace FindThatSpeaker
             catch (Exception ex)
             {
                 Console.Out.WriteLine(ex.StackTrace);
-            }
-            
+            }            
 
         }
         
         private void StopRecord(object sender, System.EventArgs e)
         {
-            log.Text = "-Log-\n\nrecording stopped...";//update the log
-            Console.WriteLine("_________________stop__________________");
+            log.Text = "-Log-\n\n-filepath- " + filePath + "\n\nrecording stopped...";//update the log
+            startRecordButton.Text = "Tap to record";
             recorder.Stop();
             recorder.Reset();
             recorder.Release();
