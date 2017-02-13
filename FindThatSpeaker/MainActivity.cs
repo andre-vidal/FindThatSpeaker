@@ -42,6 +42,7 @@ namespace FindThatSpeaker
             startRecordButton.Enabled = false;//disable button
 
             log.Text = "-Log-\n\nrecording...\n\nfilepath: "+filePath;//update the log
+            Console.WriteLine("_________________start________________");
 
             try
             {
@@ -57,7 +58,7 @@ namespace FindThatSpeaker
                 recorder.SetAudioSource(AudioSource.Mic);
                 recorder.SetOutputFormat(OutputFormat.ThreeGpp);
                 recorder.SetAudioEncoder(AudioEncoder.AmrNb);
-                recorder.SetMaxDuration(5000);
+                //recorder.SetMaxDuration(10000);
                 // Initialized state.
                 recorder.SetOutputFile(filePath);
                 // DataSourceConfigured state.
@@ -85,6 +86,7 @@ namespace FindThatSpeaker
         private void StopRecord(object sender, System.EventArgs e)
         {
             log.Text = "-Log-\n\nrecording stopped...";//update the log
+            Console.WriteLine("_________________stop__________________");
             recorder.Stop();
             recorder.Reset();
             recorder.Release();
