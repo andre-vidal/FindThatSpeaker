@@ -1,22 +1,22 @@
-C:\Users\amc12\documents\visual studio 2015\Projects\FindThatSpeaker\FindThatSpeaker\obj\Debug\android\assets\FindThatSpeaker.dll
-C:\Users\amc12\documents\visual studio 2015\Projects\FindThatSpeaker\FindThatSpeaker\obj\Debug\android\assets\Java.Interop.dll
-C:\Users\amc12\documents\visual studio 2015\Projects\FindThatSpeaker\FindThatSpeaker\obj\Debug\android\assets\Mono.Android.dll
-C:\Users\amc12\documents\visual studio 2015\Projects\FindThatSpeaker\FindThatSpeaker\obj\Debug\android\assets\mscorlib.dll
-C:\Users\amc12\documents\visual studio 2015\Projects\FindThatSpeaker\FindThatSpeaker\obj\Debug\android\assets\System.Core.dll
-C:\Users\amc12\documents\visual studio 2015\Projects\FindThatSpeaker\FindThatSpeaker\obj\Debug\android\assets\System.dll
-C:\Users\amc12\documents\visual studio 2015\Projects\FindThatSpeaker\FindThatSpeaker\obj\Debug\android\assets\System.Xml.dll
-C:\Users\amc12\documents\visual studio 2015\Projects\FindThatSpeaker\FindThatSpeaker\obj\Debug\android\assets\System.Xml.Linq.dll
-C:\Users\amc12\documents\visual studio 2015\Projects\FindThatSpeaker\FindThatSpeaker\obj\Debug\android\assets\System.Threading.dll
-C:\Users\amc12\documents\visual studio 2015\Projects\FindThatSpeaker\FindThatSpeaker\obj\Debug\android\assets\System.Runtime.dll
-C:\Users\amc12\documents\visual studio 2015\Projects\FindThatSpeaker\FindThatSpeaker\obj\Debug\android\assets\System.ComponentModel.Composition.dll
-C:\Users\amc12\documents\visual studio 2015\Projects\FindThatSpeaker\FindThatSpeaker\obj\Debug\android\assets\System.Collections.dll
-C:\Users\amc12\documents\visual studio 2015\Projects\FindThatSpeaker\FindThatSpeaker\obj\Debug\android\assets\System.Collections.Concurrent.dll
-C:\Users\amc12\documents\visual studio 2015\Projects\FindThatSpeaker\FindThatSpeaker\obj\Debug\android\assets\System.Diagnostics.Debug.dll
-C:\Users\amc12\documents\visual studio 2015\Projects\FindThatSpeaker\FindThatSpeaker\obj\Debug\android\assets\System.Reflection.dll
-C:\Users\amc12\documents\visual studio 2015\Projects\FindThatSpeaker\FindThatSpeaker\obj\Debug\android\assets\System.Linq.dll
-C:\Users\amc12\documents\visual studio 2015\Projects\FindThatSpeaker\FindThatSpeaker\obj\Debug\android\assets\System.Runtime.InteropServices.dll
-C:\Users\amc12\documents\visual studio 2015\Projects\FindThatSpeaker\FindThatSpeaker\obj\Debug\android\assets\System.Runtime.Extensions.dll
-C:\Users\amc12\documents\visual studio 2015\Projects\FindThatSpeaker\FindThatSpeaker\obj\Debug\android\assets\System.Reflection.Extensions.dll
-C:\Users\amc12\documents\visual studio 2015\Projects\FindThatSpeaker\FindThatSpeaker\obj\Debug\android\assets\System.Net.Http.dll
-C:\Users\amc12\documents\visual studio 2015\Projects\FindThatSpeaker\FindThatSpeaker\obj\Debug\android\assets\System.Runtime.Serialization.dll
-C:\Users\amc12\documents\visual studio 2015\Projects\FindThatSpeaker\FindThatSpeaker\obj\Debug\android\assets\System.ServiceModel.Internals.dll
+/Users/BrittneySamuels/Documents/University/Year3/Sem_2/COMP_3901_Capstone_Project/FindThatSpeaker/FindThatSpeaker/obj/Debug/android/assets/FindThatSpeaker.dll
+/Users/BrittneySamuels/Documents/University/Year3/Sem_2/COMP_3901_Capstone_Project/FindThatSpeaker/FindThatSpeaker/obj/Debug/android/assets/Mono.Android.dll
+/Users/BrittneySamuels/Documents/University/Year3/Sem_2/COMP_3901_Capstone_Project/FindThatSpeaker/FindThatSpeaker/obj/Debug/android/assets/mscorlib.dll
+/Users/BrittneySamuels/Documents/University/Year3/Sem_2/COMP_3901_Capstone_Project/FindThatSpeaker/FindThatSpeaker/obj/Debug/android/assets/System.dll
+/Users/BrittneySamuels/Documents/University/Year3/Sem_2/COMP_3901_Capstone_Project/FindThatSpeaker/FindThatSpeaker/obj/Debug/android/assets/System.Core.dll
+/Users/BrittneySamuels/Documents/University/Year3/Sem_2/COMP_3901_Capstone_Project/FindThatSpeaker/FindThatSpeaker/obj/Debug/android/assets/System.Xml.Linq.dll
+/Users/BrittneySamuels/Documents/University/Year3/Sem_2/COMP_3901_Capstone_Project/FindThatSpeaker/FindThatSpeaker/obj/Debug/android/assets/System.Xml.dll
+/Users/BrittneySamuels/Documents/University/Year3/Sem_2/COMP_3901_Capstone_Project/FindThatSpeaker/FindThatSpeaker/obj/Debug/android/assets/Java.Interop.dll
+/Users/BrittneySamuels/Documents/University/Year3/Sem_2/COMP_3901_Capstone_Project/FindThatSpeaker/FindThatSpeaker/obj/Debug/android/assets/System.Runtime.dll
+/Users/BrittneySamuels/Documents/University/Year3/Sem_2/COMP_3901_Capstone_Project/FindThatSpeaker/FindThatSpeaker/obj/Debug/android/assets/System.Net.Http.dll
+/Users/BrittneySamuels/Documents/University/Year3/Sem_2/COMP_3901_Capstone_Project/FindThatSpeaker/FindThatSpeaker/obj/Debug/android/assets/System.Runtime.Serialization.dll
+/Users/BrittneySamuels/Documents/University/Year3/Sem_2/COMP_3901_Capstone_Project/FindThatSpeaker/FindThatSpeaker/obj/Debug/android/assets/System.ServiceModel.Internals.dll
+/Users/BrittneySamuels/Documents/University/Year3/Sem_2/COMP_3901_Capstone_Project/FindThatSpeaker/FindThatSpeaker/obj/Debug/android/assets/System.Threading.dll
+/Users/BrittneySamuels/Documents/University/Year3/Sem_2/COMP_3901_Capstone_Project/FindThatSpeaker/FindThatSpeaker/obj/Debug/android/assets/System.Collections.dll
+/Users/BrittneySamuels/Documents/University/Year3/Sem_2/COMP_3901_Capstone_Project/FindThatSpeaker/FindThatSpeaker/obj/Debug/android/assets/System.Collections.Concurrent.dll
+/Users/BrittneySamuels/Documents/University/Year3/Sem_2/COMP_3901_Capstone_Project/FindThatSpeaker/FindThatSpeaker/obj/Debug/android/assets/System.Diagnostics.Debug.dll
+/Users/BrittneySamuels/Documents/University/Year3/Sem_2/COMP_3901_Capstone_Project/FindThatSpeaker/FindThatSpeaker/obj/Debug/android/assets/System.Reflection.dll
+/Users/BrittneySamuels/Documents/University/Year3/Sem_2/COMP_3901_Capstone_Project/FindThatSpeaker/FindThatSpeaker/obj/Debug/android/assets/System.Linq.dll
+/Users/BrittneySamuels/Documents/University/Year3/Sem_2/COMP_3901_Capstone_Project/FindThatSpeaker/FindThatSpeaker/obj/Debug/android/assets/System.Runtime.InteropServices.dll
+/Users/BrittneySamuels/Documents/University/Year3/Sem_2/COMP_3901_Capstone_Project/FindThatSpeaker/FindThatSpeaker/obj/Debug/android/assets/System.Runtime.Extensions.dll
+/Users/BrittneySamuels/Documents/University/Year3/Sem_2/COMP_3901_Capstone_Project/FindThatSpeaker/FindThatSpeaker/obj/Debug/android/assets/System.Reflection.Extensions.dll
+/Users/BrittneySamuels/Documents/University/Year3/Sem_2/COMP_3901_Capstone_Project/FindThatSpeaker/FindThatSpeaker/obj/Debug/android/assets/System.ComponentModel.Composition.dll

@@ -5,6 +5,7 @@ using Android.App;
 using Android.Widget;
 using Android.OS;
 using Android.Media;
+using System.Collections;
 
 namespace FindThatSpeaker
 {
@@ -12,7 +13,7 @@ namespace FindThatSpeaker
     public class MainActivity : Activity
     {
         string filePath = "";
-        string filename = "testAudio.mp3";
+        string filename = "testAudio.wav";
 
         Button startRecordButton;
 
@@ -92,7 +93,25 @@ namespace FindThatSpeaker
             recorder.Release();
             recorder = null;
             startRecordButton.Enabled = true;//re-enable button
+			Console.Out.WriteLine(GetFileBits(filePath));
         }
+		//opens wav file in binary mode and converts it to bits(0s and 1s)
+		private BitArray GetFileBits(string filename)
+		{
+			byte[] bytes;
+			using (FileStream file = new FileStream(filename, FileMode.Open, FileAccess.Read))
+			{
+				bytes = new byte[file.Length];
+				file.Read(bytes, 0, (int)file.Length);
+			}
+			BitArray bits = new BitArray(bytes);
+			for (int i = 0; i < bits.Count; i++)
+			{
+				bool bit = bits.Get(i);
+				Console.Write(bit ? 1 : 0);
+			}
+			return new BitArray(bytes);
+		}
         
     }
 }

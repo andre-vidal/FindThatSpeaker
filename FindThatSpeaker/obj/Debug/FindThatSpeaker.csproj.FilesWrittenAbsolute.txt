@@ -1,0 +1,15 @@
+/Users/BrittneySamuels/Documents/University/Year3/Sem_2/COMP_3901_Capstone_Project/FindThatSpeaker/FindThatSpeaker/obj/Debug/MonoAndroid,Version=v6.0.AssemblyAttribute.cs
+/Users/BrittneySamuels/Documents/University/Year3/Sem_2/COMP_3901_Capstone_Project/FindThatSpeaker/FindThatSpeaker/bin/Debug/FindThatSpeaker.dll.mdb
+/Users/BrittneySamuels/Documents/University/Year3/Sem_2/COMP_3901_Capstone_Project/FindThatSpeaker/FindThatSpeaker/bin/Debug/FindThatSpeaker.dll
+/Users/BrittneySamuels/Documents/University/Year3/Sem_2/COMP_3901_Capstone_Project/FindThatSpeaker/FindThatSpeaker/bin/Debug/FindThatSpeaker.FindThatSpeaker.apk
+/Users/BrittneySamuels/Documents/University/Year3/Sem_2/COMP_3901_Capstone_Project/FindThatSpeaker/FindThatSpeaker/obj/Debug/android/bin/FindThatSpeaker.FindThatSpeaker.apk
+/Users/BrittneySamuels/Documents/University/Year3/Sem_2/COMP_3901_Capstone_Project/FindThatSpeaker/FindThatSpeaker/obj/Debug/res/layout/main.xml
+/Users/BrittneySamuels/Documents/University/Year3/Sem_2/COMP_3901_Capstone_Project/FindThatSpeaker/FindThatSpeaker/obj/Debug/res/values/strings.xml
+/Users/BrittneySamuels/Documents/University/Year3/Sem_2/COMP_3901_Capstone_Project/FindThatSpeaker/FindThatSpeaker/obj/Debug/res/drawable/icon.png
+/Users/BrittneySamuels/Documents/University/Year3/Sem_2/COMP_3901_Capstone_Project/FindThatSpeaker/FindThatSpeaker/obj/Debug/res/drawable/recordbutton.png
+/Users/BrittneySamuels/Documents/University/Year3/Sem_2/COMP_3901_Capstone_Project/FindThatSpeaker/FindThatSpeaker/obj/Debug/res/drawable/appicon.png
+/Users/BrittneySamuels/Documents/University/Year3/Sem_2/COMP_3901_Capstone_Project/FindThatSpeaker/FindThatSpeaker/obj/Debug/R.cs.flag
+/Users/BrittneySamuels/Documents/University/Year3/Sem_2/COMP_3901_Capstone_Project/FindThatSpeaker/FindThatSpeaker/bin/Debug/FindThatSpeaker.FindThatSpeaker-Signed.apk
+/Users/BrittneySamuels/Documents/University/Year3/Sem_2/COMP_3901_Capstone_Project/FindThatSpeaker/FindThatSpeaker/obj/Debug/uploadflags.txt
+/Users/BrittneySamuels/Documents/University/Year3/Sem_2/COMP_3901_Capstone_Project/FindThatSpeaker/FindThatSpeaker/obj/Debug/FindThatSpeaker.dll
+/Users/BrittneySamuels/Documents/University/Year3/Sem_2/COMP_3901_Capstone_Project/FindThatSpeaker/FindThatSpeaker/obj/Debug/FindThatSpeaker.dll.mdb
