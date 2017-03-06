@@ -6,6 +6,9 @@ using Android.Widget;
 using Android.OS;
 using Android.Media;
 using System.Collections;
+using FFTLibrary;
+using System.Numerics;
+using Java.Lang;
 
 namespace FindThatSpeaker
 {
@@ -13,7 +16,9 @@ namespace FindThatSpeaker
     public class MainActivity : Activity
     {
         string filePath = "";
+        string filePath2 = "";
         string filename = "testAudio.wav";
+        string filename2 = "testAudio2.wav";
 
         ImageButton startRecordButton;
 
@@ -33,10 +38,13 @@ namespace FindThatSpeaker
             //Get the file path for the media file
             filePath = Android.OS.Environment.GetExternalStoragePublicDirectory(Android.OS.Environment.DirectoryMusic) + "/" + filename;
 
+            //filePath2 = Android.OS.Environment.GetExternalStoragePublicDirectory(Android.OS.Environment.DirectoryMusic) + "/" + filename2;
+
             log = FindViewById<TextView>(Resource.Id.log);
             log.Text = "-Log-\n\nwaiting...";
 
             startRecordButton.Click += StartRecord;
+            //TestFFT();
         }
 
         private void StartRecord(object sender, System.EventArgs e)
@@ -75,9 +83,9 @@ namespace FindThatSpeaker
                     StopRecord(sender, e);
                 };
 
-                h.PostDelayed(myAction, 5000);//run the action defined above after 5 seconds
+                h.PostDelayed(myAction, 3000);//run the action defined above after 5 seconds
             }
-            catch (Exception ex)
+            catch (System.Exception ex)
             {
                 Console.Out.WriteLine(ex.StackTrace);
             }            
@@ -116,25 +124,58 @@ namespace FindThatSpeaker
         private void TestFFT()
         {
             byte[] data = GetFileBytes(filePath);
-            double[] x = new double[data.Length];
-            double[] y = new double[data.Length];
+           
+            double[] prex = new double[data.Length];//real array before fft performed
+            double[] prey = new double[data.Length];//imaginary array before fft performed
+            double[] postx = new double[data.Length];//real array after fft performed
+            double[] posty = new double[data.Length];//imaginary array after fft performed
+
+            //cls.StripSilence(filePath);
 
             //converting byte array into double array
-            for (int i = 0; i < x.Length; i++)
-            {
-                x[i] = data[i] / 32768.0;
+            for (int i = 0; i < data.Length; i++)
+             {
+                prex[i] = data[i] / 32768.0;
+                prey[i] = 0;
+                postx[i] = data[i] / 32768.0;
+                posty[i] = 0;
+
             }
 
-            //display contents of input arrays
-            log.Text = "realin: " + x[0] + "\n";
-            log.Text += "imagin: " + y[0] + "\n\n";
+            Fft.Transform(postx, posty);//perform fourier fast transform   
+            
+            string path = "test.csv";
+            var documentsPath = Android.OS.Environment.GetExternalStoragePublicDirectory(Android.OS.Environment.DirectoryMusic);
+            var destinationPath = Path.Combine(documentsPath.ToString(), path);
 
-            Fft.Transform(x, y);//perform fourier fast transform
 
-            //display contents of output arrays
-            log.Text += "realout: " + x[0] + "\n";
-            log.Text += "imagout: " + y[0];
+            if (File.Exists(destinationPath))
+            {
+                File.Delete(destinationPath);
+            }
+            
+            //var csv = new StringBuilder();
+
+            using (var w = new StreamWriter(destinationPath))
+            {
+                for (int i = 0; i < data.Length; i++)
+                {
+                    //display contents of input --> output arrays
+                    Console.WriteLine("(" + (prex[i]) + "," + (prey[i]) + ")-->(" + (postx[i]) + "," + (posty[i]) + ")");
+
+                    //create CSV file
+                    var first = prex[i].ToString();
+                    var second = prey[i].ToString();
+                    var third = postx[i].ToString();
+                    var fourth = posty[i].ToString();
+                    //Suggestion made by KyleMit
+                    var newLine = string.Format("{0},{1},{2},{3}", first, second, third, fourth);
+                    // csv.Append(newLine);
+                    w.WriteLine(newLine);
+                    w.Flush();
+                }
+            }
+            //File.WriteAllText(destinationPath, csv.ToString());
         }
-
     }
 }
